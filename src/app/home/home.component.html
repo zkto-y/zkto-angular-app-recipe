@@ -1,0 +1,16 @@
+<div class="home-container">
+    <div class="row justify-content-center g-4">
+    <!-- "col-md-8" shows one image per row. Smaller value will show more images. -->
+      <div class="col-md-4" *ngFor="let item of recipeList">
+        <div class="card mb-4 shadow recipe-card h-100" (click)="viewRecipe(item)">
+            <img [src]="item.url" class="image-container card-img-fixed" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.cardTitle }}</h5>
+            <p class="card-text dancing-script-font">{{ item.cardText }}</p>
+            <!-- <a [routerLink]="item.route" class="btn btn-primary">View Recipe</a> Navigate to page without parameters -->
+            <!-- <a (click)="viewRecipe(item)" class="btn btn-primary">View Recipe</a> Navigate to page with parameters -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
