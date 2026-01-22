@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Router, RouterModule } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-recipe',
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.css'
 })

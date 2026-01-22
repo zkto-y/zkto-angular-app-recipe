@@ -4,13 +4,15 @@
       <div class="card mb-4 shadow">
         <div class="card-body">
           <h3 class="text-center">{{ recipe.title }}</h3>
-            <img [src]="recipe.url" class="image-container rounded mb-4" alt="Image">
+          <img [src]="recipe.url" class="image-container rounded mb-4" alt="Image">
           <div class="col-md-12 mb-3">
             <h5>Ingredients: </h5>
             <ul class="list-group ps-4">
-              <li *ngFor="let item of recipe.ingredients" class="">
-                {{ item }}
-              </li>
+              @for (item of recipe.ingredients; track item) {
+                <li class="">
+                  {{ item }}
+                </li>
+              }
             </ul>
           </div>
           <div class="col-md-12">
